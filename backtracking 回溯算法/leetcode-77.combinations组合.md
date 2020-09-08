@@ -1,4 +1,4 @@
-#题目
+# 题目
 
 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
 
@@ -14,7 +14,7 @@
 ]
 
 
-#要点&&思路
+# 要点&&思路
 
 - 如果解决一个问题有多个步骤，每一个步骤有多种方法，题目又要我们找出所有的方法，可以使用回溯算法；
 - 回溯算法是在一棵树上的 深度优先遍历（因为要找所有的解，所以需要遍历）；
@@ -23,9 +23,9 @@
 这里的剪枝要尤其注意一下，每一次不一定要遍历从当前position到最大的n，可以发现最大的是到上限为 n-(k-path.size)+1),第一次写不仔细想下可能会漏掉剪枝，剪枝之后时间还是会节省不少的。
 
 
-#code
+# code
 
-class Solution {
+    class Solution {
     public List<List<Integer>> combine(int n, int k) {
         
         List<List<Integer>> ans =new ArrayList<>();
