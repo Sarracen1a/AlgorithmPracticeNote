@@ -25,29 +25,33 @@
 
 # code
 
-    class Solution {
-    public List<List<Integer>> combine(int n, int k) {
-        
-        List<List<Integer>> ans =new ArrayList<>();
-        Deque<Integer> path = new ArrayDeque<>();
-        if(n<k||k<=0){
-            return ans;
-        }
-        dfs(n,k,1,path,ans);
-        
-        return ans;
-    }
+```java
+class Solution {
+	public List<List<Integer>> combine(int n, int k) {
     
-    public void dfs(int n,int k,int position,Deque<Integer> path,List<List<Integer>> ans){
-        if(path.size()==k){
-            ans.add(new ArrayList(path));
-            return;
-        }
-        for(int x=position;x<=n-(k-path.size())+1;x++){ //←注意一下这里的剪枝
-            path.addLast(x);
-            dfs(n,k,x+1,path,ans);
-            path.removeLast();
-        }
-    }
+    	List<List<Integer>> ans =new ArrayList<>();
+    	Deque<Integer> path = new ArrayDeque<>();
+    	if(n<k||k<=0){
+        	return ans;
+    	}
+        
+    	dfs(n,k,1,path,ans);
+    
+        return ans;
+	}
+
+	public void dfs(int n,int k,int position,Deque<Integer> path,List<List<Integer>> ans){
+    	if(path.size()==k){
+        	ans.add(new ArrayList(path));
+        	return;
+    	}
+    	for(int x=position;x<=n-(k-path.size())+1;x++){ //←注意一下这里的剪枝
+        	path.addLast(x);
+        	dfs(n,k,x+1,path,ans);
+        	path.removeLast();
+    	}
+	}
 }
+```
+
 
