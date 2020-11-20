@@ -12,9 +12,7 @@
 
 - 回溯算法
 
-- 动态规划
-  - [面试题 08.01. 三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci/)
-  - [面试题 08.11. 硬币](https://leetcode-cn.com/problems/coin-lcci/)
+
 
 
 
@@ -24,7 +22,14 @@
 
 
 
+
+
+
+
 TODOLIST：
 
 - 整理好零散的刷题笔记
+- 动态规划
+  - [面试题 08.01. 三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci/)
+  - [面试题 08.11. 硬币](https://leetcode-cn.com/problems/coin-lcci/)
 
